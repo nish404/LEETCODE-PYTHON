@@ -7,10 +7,11 @@ Output: [0, 1] (because nums[0] + nums[1] = 2 + 7 = 9)
 '''
 
 def two_sum(nums, target):
-    hashmap = {}
-    for i, num in enumerate(nums):
-        complement = target - num
-        if complement in hashmap:
-            return [hashmap[complement], i]
-        hashmap[num] = i
-    raise ValueError("No two sum solution")
+    hashmap = {}  # Initialize a dictionary to store the complement and its index
+    for i, num in enumerate(nums):  # Iterate through the list with index
+        complement = target - num  # Calculate the complement for the current number
+        if complement in hashmap:  # If complement is in the dictionary
+            return [hashmap[complement], i]  # Return indices of the two numbers
+        hashmap[num] = i  # Add the current number and its index to the dictionary
+    raise ValueError("No two sum solution")  # Raise an error if no solution is found
+
