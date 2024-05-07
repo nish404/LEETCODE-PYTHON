@@ -1,5 +1,9 @@
+'''
+REVERSE DIGITS OF AN INTEGER
+
 Input: 123
 Output: 321
+'''
 
 def reverse_integer(x):
     rev = 0
