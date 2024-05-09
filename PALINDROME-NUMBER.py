@@ -14,6 +14,8 @@ def is_palindrome(x):
         x //= 10  # Remove last digit from x
     return x == reversed_num or x == reversed_num // 10  # Check if x is equal to reversed_num or half of reversed_num (for odd digit length)
 
+================================================================================================================
+
 def is_palindrome(number):
     # Convert the number to a string for easier manipulation
     num_str = str(number)
