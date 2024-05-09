@@ -14,3 +14,33 @@ def is_palindrome(x):
         x //= 10  # Remove last digit from x
     return x == reversed_num or x == reversed_num // 10  # Check if x is equal to reversed_num or half of reversed_num (for odd digit length)
 
+def is_palindrome(number):
+    # Convert the number to a string for easier manipulation
+    num_str = str(number)
+    
+    # Calculate the length of the string
+    length = len(num_str)
+    
+    # Initialize two pointers, one at the beginning and one at the end of the string
+    start = 0
+    end = length - 1
+    
+    # Loop until the pointers meet or cross each other
+    while start < end:
+        # Compare the characters at the current pointers
+        if num_str[start] != num_str[end]:
+            # If they are not equal, the number is not a palindrome
+            return False
+        
+        # Move the pointers towards each other
+        start += 1
+        end -= 1
+    
+    # If the loop completes without returning False, the number is a palindrome
+    return True
+
+# Test the function with some examples
+print(is_palindrome(121))  # True
+print(is_palindrome(12321))  # True
+print(is_palindrome(1221))  # True
+print(is_palindrome(12345))  # False
